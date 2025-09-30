@@ -2,7 +2,7 @@
 
 Landing page de captação de leads para a Nacional Gás, empresa distribuidora de GLP (Gás Liquefeito de Petróleo).
 
-🌐 **Live Demo**: [https://andressabgomes.github.io/nacional-gas](https://andressabgomes.github.io/nacional-gas)
+🌐 **Live Demo**: [https://andressabgomes.github.io/lpe](https://andressabgomes.github.io/lpe)
 
 ## Sobre o Projeto
 
