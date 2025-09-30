@@ -1,104 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/lpe/placeholder.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nacional Gás - Landing Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #dc2626, #fbbf24);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 600px;
-        }
-        h1 {
-            color: #dc2626;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #666;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .btn {
-            background: #fbbf24;
-            color: #000;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        .btn:hover {
-            background: #f59e0b;
-            transform: translateY(-2px);
-        }
-        .loading {
-            color: #dc2626;
-            font-size: 1rem;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>🏭 Nacional Gás</h1>
-        <p>Energia que impulsiona sua indústria e agronegócio</p>
-        <p>Mais eficiência, segurança e competitividade para o seu negócio com soluções em GLP sob medida.</p>
-        
-        <a href="#" class="btn" onclick="loadApp()">Quero falar com um especialista</a>
-        
-        <div class="loading" id="loading" style="display: none;">
-            Carregando aplicação...
-        </div>
-    </div>
-
-    <script>
-        function loadApp() {
-            document.getElementById('loading').style.display = 'block';
-            
-            // Tentar carregar a aplicação React
-            const script = document.createElement('script');
-            script.type = 'module';
-            script.src = '/lpe/assets/index-FJb-2ygf.js';
-            script.onload = function() {
-                console.log('Aplicação React carregada com sucesso!');
-            };
-            script.onerror = function() {
-                console.error('Erro ao carregar aplicação React');
-                document.getElementById('loading').innerHTML = 'Erro ao carregar aplicação. Recarregue a página.';
-            };
-            document.head.appendChild(script);
-            
-            // Carregar CSS
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = '/lpe/assets/index-BGcMkjyg.css';
-            document.head.appendChild(link);
-        }
-        
-        // Tentar carregar automaticamente após 2 segundos
-        setTimeout(() => {
-            loadApp();
-        }, 2000);
-    </script>
-</body>
+    <script type="module" crossorigin src="/lpe/assets/index-FJb-2ygf.js"></script>
+    <link rel="stylesheet" crossorigin href="/lpe/assets/index-BGcMkjyg.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
