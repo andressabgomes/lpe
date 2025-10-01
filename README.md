@@ -1,109 +1,149 @@
-# Nacional Gás - Landing Page
+# 🏭 Landing Page Nacional Gás
 
-Landing page de captação de leads para a Nacional Gás, empresa distribuidora de GLP (Gás Liquefeito de Petróleo).
+Landing page profissional para a Nacional Gás com padrão visual do dashboard corporativo.
 
-🌐 **Live Demo**: [https://andressabgomes.github.io/lpe](https://andressabgomes.github.io/lpe)
+## 🎯 **Sobre o Projeto**
 
-## Sobre o Projeto
+Landing page desenvolvida para a Nacional Gás, empresa líder em soluções de GLP para indústria e agronegócio. O projeto implementa o padrão visual oficial do dashboard corporativo com design limpo e profissional.
 
-Esta aplicação web foi desenvolvida para captar leads qualificados através de um funil de conversão em 5 etapas:
+## 🎨 **Identidade Visual**
 
-1. **Hero + Value Proposition** - Apresentação inicial da empresa
-2. **Seleção de Tipo de Negócio** - Categorização do cliente (Indústria, Agronegócio, Comércio, etc.)
-3. **Seleção de Produto** - Escolha do tipo de GLP (P20, P45, P190, Granel, Orientação)
-4. **Formulário de Lead** - Captura de dados do cliente
-5. **Página de Agradecimento** - Confirmação do envio
+### **Cores Oficiais:**
+- **Vermelho Nacional Gás**: `#DC2626` (primário)
+- **Azul Nacional Gás**: `#2563EB` (secundário)
+- **Neutros**: Escala completa de cinzas para textos e fundos
 
-## Tecnologias Utilizadas
+### **Design System:**
+- **Cards**: Brancos com cantos arredondados (16px) e sombras suaves
+- **Fundo**: Cinza claro suave (`#F5F5F5`)
+- **Tipografia**: Inter (sistema)
+- **Visual**: Limpo, profissional, sem glassmorphism
 
-- **Frontend**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS + shadcn/ui
-- **Formulários**: React Hook Form + Zod (validação)
-- **Roteamento**: React Router DOM
-- **Estado**: React Query (TanStack Query)
-- **Notificações**: Sonner + Radix Toast
-- **Ícones**: Lucide React
-- **Email**: EmailJS para envio de leads
+## 🚀 **Tecnologias**
 
-## Como Executar o Projeto
+- **React 18** + **TypeScript**
+- **Vite** (build tool)
+- **Tailwind CSS** (styling)
+- **Radix UI** (componentes)
+- **Lucide React** (ícones)
+- **React Router** (navegação)
+- **React Hook Form** (formulários)
+- **EmailJS** (envio de emails)
 
-### Pré-requisitos
+## 📱 **Funcionalidades**
 
-- Node.js (versão 18 ou superior)
+- ✅ **Hero Section** com CTA principal
+- ✅ **Value Proposition** com benefícios e estatísticas
+- ✅ **Seleção de Tipo de Negócio** (Industrial/Agronegócio)
+- ✅ **Seleção de Produtos** específicos por segmento
+- ✅ **Formulário de Lead** com validação
+- ✅ **Página de Agradecimento**
+- ✅ **Header** com contato e logo
+- ✅ **Footer** com informações completas
+- ✅ **Design Responsivo** (mobile-first)
+- ✅ **Acessibilidade** (ARIA, alt texts)
+
+## 🏢 **Informações da Empresa**
+
+- **Nome**: Nacional Gás
+- **CNPJ**: 06.980.064/0001-82
+- **Fundação**: 1951
+- **Contato**: 0800 702 1200
+- **Endereço**: Praça da Imprensa Chanceler Edson Queiroz, 60, Dionísio Torres, Fortaleza-CE
+- **CEP**: 135-690
+
+## 🛠️ **Instalação e Execução**
+
+### **Pré-requisitos:**
+- Node.js 18+
 - npm ou yarn
 
-### Instalação
-
-```sh
+### **Instalação:**
+```bash
 # Clone o repositório
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/andressabgomes/nacional-gas-landing.git
 
-# Navegue para o diretório do projeto
-cd nacional-gas-leap-main
+# Entre no diretório
+cd nacional-gas-landing
 
 # Instale as dependências
 npm install
-
-# Inicie o servidor de desenvolvimento
-npm run dev
 ```
 
-### Scripts Disponíveis
+### **Execução:**
+```bash
+# Modo desenvolvimento
+npm run dev
 
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Cria build de produção
-- `npm run lint` - Executa o linter
-- `npm run preview` - Visualiza o build de produção
+# Build para produção
+npm run build
 
-## Estrutura do Projeto
+# Preview do build
+npm run preview
+```
+
+## 📁 **Estrutura do Projeto**
 
 ```
 src/
 ├── components/          # Componentes React
-│   ├── ui/             # Componentes de UI (shadcn/ui)
-│   ├── Hero.tsx        # Seção hero
+│   ├── ui/             # Componentes UI (Radix)
+│   ├── Header.tsx      # Cabeçalho
+│   ├── Footer.tsx      # Rodapé
+│   ├── Hero.tsx        # Seção principal
 │   ├── ValueProposition.tsx
-│   ├── BusinessTypeSelection.tsx
-│   ├── ProductSelection.tsx
-│   ├── LeadForm.tsx
-│   └── ThankYou.tsx
-├── pages/              # Páginas da aplicação
-├── hooks/              # Hooks customizados
-├── lib/                # Utilitários (leadService.ts)
+│   ├── SelectionCard.tsx
+│   └── NacionalGasLogo.tsx
+├── pages/              # Páginas
+├── lib/                # Utilitários
+├── hooks/              # Custom hooks
 └── assets/             # Imagens e recursos
 ```
 
-## Funcionalidades
+## 🎨 **Componentes Principais**
 
-- **Captação de Leads**: Formulário completo com validação
-- **Segmentação**: Por tipo de negócio e produto
-- **UX Otimizada**: Navegação step-by-step com indicador de progresso
-- **Responsivo**: Design mobile-first
-- **Validação**: Formulários com validação em tempo real
-- **Notificações**: Feedback visual para o usuário
-- **Envio de Emails**: Integração com EmailJS para notificação de leads
+### **NacionalGasLogo**
+Componente unificado da logo com suporte a:
+- `variant="original"` (imagem PNG oficial)
+- `variant="svg"` (SVG para compatibilidade)
 
-## Deploy
+### **SelectionCard**
+Card de seleção com estados:
+- Normal: Borda cinza, fundo branco
+- Selecionado: Borda vermelha, fundo vermelho claro
+- Hover: Sombra suave
 
-Para fazer deploy do projeto, você pode usar qualquer plataforma de hospedagem estática como:
+### **Button**
+Botões com variantes:
+- `default`: Vermelho Nacional Gás
+- `secondary`: Azul Nacional Gás
+- `outline`: Contorno vermelho
 
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3 + CloudFront
+## 📊 **Performance**
 
-Execute `npm run build` para gerar os arquivos de produção na pasta `dist/`.
+- **Build**: ~422KB (gzipped)
+- **CSS**: ~66KB (gzipped)
+- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices)
 
-## Configuração de Email
+## 🌐 **Deploy**
 
-O sistema está configurado para enviar leads por email via EmailJS. As credenciais estão configuradas no arquivo `.env.local`:
+O projeto está configurado para deploy automático no GitHub Pages:
 
-```bash
-VITE_EMAILJS_SERVICE_ID=service_d417gnn
-VITE_EMAILJS_TEMPLATE_ID=template_4vb5y4c
-VITE_EMAILJS_PUBLIC_KEY=Ks9L5IhgpTINqOOCY
-VITE_TO_EMAIL=andressabgomes10@gmail.com
-```
+1. Push para branch `main`
+2. GitHub Actions executa build
+3. Deploy automático para GitHub Pages
 
-Os leads são enviados automaticamente quando o formulário é submetido.
+## 👩‍💻 **Desenvolvido por**
+
+**@andressabgomes** - Desenvolvedora Frontend
+
+- GitHub: [@andressabgomes](https://github.com/andressabgomes)
+- LinkedIn: [Andressa Gomes](https://linkedin.com/in/andressabgomes)
+
+## 📄 **Licença**
+
+Copyright © 1951-2025. Nacional Gás - CNPJ: 06.980.064/0001-82 - Todos os direitos reservados.
+
+---
+
+**Feito com ❤️ por [@andressabgomes](https://github.com/andressabgomes)**
